@@ -11,7 +11,18 @@ class Memory
   end
 
   def add(memory_hash)
-    @memories << memory_hash
+    @memories << hashify(parse(memory_hash))
   end
+
+  private
+
+  def parse(keyval)
+    keyval.split('=')
+  end
+
+  def hashify(keyval_array)
+    keyval_array.to_h
+  end
+
 
 end
