@@ -1,19 +1,34 @@
 require 'sinatra/base'
 require_relative './model/memory'
-require_relative './controller/session_memory'
 
 class DatabaseServerApp < Sinatra::Base
+  enable :sessions
 
   @memory = Memory.new
 
-  get '/' do
-    "hi"
-  end
 
+# get '/set' do
+#   if session['params'] == nil
+#     redirect '/set'
+#   end
+#   p session['params']
+# end
 
 get "/set" do
-  key&val = request.query_string
-  string_to_add.split('=')
+  session['params'] = params.inspect
+   @params = session['params']
+   erb :set_view
+   redirect '/'
+end
+
+get '/' do
+  erb :wait_for_get
+end
+
+get "/get" do
+  @key = params[:key].inspect
+  @session = session['params']
+  @value = @session[@key]
 end
 
 

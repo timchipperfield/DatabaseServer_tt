@@ -12,7 +12,7 @@ describe '#memory' do
   end
 
   it "can add new memories" do
-    expect {@memory.add('key=value')}.to change{ @memory.memories.count }.by(1)
+    expect { @memory.add('key=value') }.to change{ @memory.memories.count }.by(1)
   end
 
 end

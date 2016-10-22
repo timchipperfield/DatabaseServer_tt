@@ -14,14 +14,12 @@ class Memory
     @memories << hashify(parse(memory_hash))
   end
 
-  private
-
   def parse(keyval)
     keyval.split('=')
   end
 
   def hashify(keyval_array)
-    keyval_array.to_h
+    keyval_array.each_with_object({}) { |v,h| h[v] = f(v) }
   end
 
 
