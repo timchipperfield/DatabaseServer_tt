@@ -1,4 +1,8 @@
+[![Build Status](https://travis-ci.org/timchipperfield/DatabaseServer_tt.svg?branch=master)](https://travis-ci.org/timchipperfield/DatabaseServer_tt)
+
 [![Coverage Status](https://coveralls.io/repos/github/timchipperfield/DatabaseServer_tt/badge.svg?branch=master)](https://coveralls.io/github/timchipperfield/DatabaseServer_tt?branch=master)
+
+
 
 ## Description
 
