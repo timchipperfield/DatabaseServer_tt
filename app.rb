@@ -6,8 +6,7 @@ class DatabaseServerApp < Sinatra::Base
   enable :sessions
 
 get "/set" do
-  session[:params] = params.to_json
-   erb :set_view
+   session[:params] = params.to_json
    redirect '/'
 end
 

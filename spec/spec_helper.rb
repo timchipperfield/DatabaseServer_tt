@@ -19,8 +19,10 @@
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require_relative '../app' # loading capybara
-# include Capybara::DSL
+require_relative '../app'
+require 'coveralls'
+
+Coveralls.wear!
 
 Capybara.app = DatabaseServerApp
 

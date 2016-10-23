@@ -15,11 +15,13 @@ feature 'the user can navigate as they follow the prompts' do
   end
 end
 
-
 feature 'saving and using key and value' do
   scenario 'the user can set a key and value' do
     visit '/set?examplekey=examplevalue'
     visit('/get?key=examplekey')
     expect(page).to have_content('examplevalue')
   end
+end
+
+feature 'edge cases' do
 end
