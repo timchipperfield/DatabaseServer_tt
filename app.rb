@@ -1,22 +1,12 @@
 require 'sinatra/base'
 require_relative './model/memory'
+require 'json'
 
 class DatabaseServerApp < Sinatra::Base
   enable :sessions
 
-  @memory = Memory.new
-
-
-# get '/set' do
-#   if session['params'] == nil
-#     redirect '/set'
-#   end
-#   p session['params']
-# end
-
 get "/set" do
-  session['params'] = params.inspect
-   @params = session['params']
+  session[:params] = params.to_json
    erb :set_view
    redirect '/'
 end
@@ -26,9 +16,8 @@ get '/' do
 end
 
 get "/get" do
-  @key = params[:key].inspect
-  @session = session['params']
-  @value = @session[@key]
+  @value = retrive_memory(session[:params], params[:key])
+  erb :value
 end
 
 
