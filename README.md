@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/timchipperfield/DatabaseServer_tt/badge.svg?branch=master)](https://coveralls.io/github/timchipperfield/DatabaseServer_tt?branch=master)
+
 ## Description
 
 This is a simple Sinatra server that is accessible on http://localhost:4000/. When it receives a request on http://localhost:4000/set?somekey=somevalue, it stores the key an value. When the server receives http://localhost:4000/get?key=somekey, it returns the value stored at the key. The data is not stored in a database but the program is configured so that a database could be added at a later date.
