@@ -11,3 +11,5 @@ This is a practice test test. It's a simple Sinatra server that is accessible on
 1. Clone the repo to your local computer.
 2. Bundle Install
 3. type 'ruby app.rb' in your command line to start the server
+4. set a key and value using http://localhost:4000/set?somekey=somevalue
+5. Follow the prompts
